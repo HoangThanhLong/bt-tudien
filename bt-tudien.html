@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
+Lưu ý: Chỉ nhập nhưng từ dog,cat,monkey,mouse,tiger,pig.
+<br>
+    <input type="text" id="tran">
+    <input type="button" value="Translate" onclick="dich()"><br>
+    <div id="messageDiv"></div>
+<script>
+    let textEng = ['dog','cat','monkey','mouse','tiger','pig'];
+    let textVn = ['con chó', 'con mèo', 'con khỉ', 'con chuột', 'con hổ', 'con lợn'];
+    function dich() {
+        let a = document.getElementById("tran").value;
+        for (i = 0; i < textEng.length; i++){
+            if (a === textEng[i]){
+                document.getElementById("messageDiv").innerHTML = textVn[i];
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
